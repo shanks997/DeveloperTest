@@ -13,13 +13,13 @@ class math3Test {
 	
 	@Test
 	void test_error1() {
-		math3Use.div(0, 2);
+		div(0, 2);
 	}
 	
 	@Test
 	void test_error2() {
 		try {
-			math3Use.div(0, 2);
+			div(0, 2);
 		} catch (ArithmeticException e) {
 			System.out.println(e.getMessage());
 		}
