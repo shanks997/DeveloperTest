@@ -7,7 +7,7 @@ import org.apache.commons.math3.analysis.function.Subtract;
 public class math3Use {
 	
 	public static double abs(double x) {
-//		Abs abs = new Abs();
+		Abs abs = new Abs();
 		return abs.value(x);
 	}
 	
