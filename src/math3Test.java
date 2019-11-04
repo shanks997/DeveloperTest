@@ -13,13 +13,13 @@ class math3Test {
 	
 	@Test
 	void test_error1() {
-		div(0, 2);
+		math3Use.div(0, 2);
 	}
 	
 	@Test
 	void test_error2() {
 		try {
-			div(0, 2);
+			math3Use.div(0, 2);
 		} catch (ArithmeticException e) {
 			System.out.println(e.getMessage());
 		}
@@ -48,57 +48,13 @@ class math3Test {
 	// 测试小程序方法 sub
 	@Test
 	void test_math3_sub() {
-		assertEquals(2, sub(3, 1));
+		assertEquals(2, math3Use.sub(3, 1));
 	}
 	
 	// 测试小程序方法 div
 	@Test
 	void test_math3_div() {
-		assertEquals(2, div(6, 3));
+		assertEquals(2, math3Use.div(6, 3));
 	}
-	
-	
-	/*
-	 * 开发者测试(2) 4 
-	 * 驱动模块、桩模块测试
-	 */	
-	
-	// 对 abs 方法设置驱动模块
-	double driver_abs(double x) {
-		x = abs(x);
-		return x + 1;
-	}
-	
-	@Test
-	void test_abs() {
-		assertEquals(3, driver_abs(2));
-	}
-	
-	
-	// 对 calculate 方法设置桩模块
-	public static double abs(double x) {
-		return x;
-	}
-	
-	public static double add(double x, double y) {
-		return x;
-	}
-	
-	public static double sub(double x, double y) {
-		return x;
-	}
-	
-	public static double mul(double x, double y) {
-		return x;
-	}
-	
-	public static double div(double x, double y) {
-		return x;
-	}
-
-	@Test
-	void test_calculate() {
-		math3Use.calculate(1, 2);
-	}
-	
+		
 }
