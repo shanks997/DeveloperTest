@@ -27,8 +27,8 @@ public class math3Use {
 	}
 	
 	public static double div(double x, double y) {
-		if (y == 0) {
-			throw new ArithmeticException("除数不能为0！");
+		if (x == 0) {
+			throw new ArithmeticException("被除数不能为0！");
 		}
 		Divide div = new Divide();
 		return div.value(x, y);

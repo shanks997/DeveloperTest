@@ -66,6 +66,92 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+    <target name="math3Test">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="math3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="DeveloperTest.classpath"/>
+        </junit>
+    </target>
+    <target name="math3Test.test">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="math3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="DeveloperTest.classpath"/>
+        </junit>
+    </target>
+    <target name="math3Test.test_abs">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="math3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="DeveloperTest.classpath"/>
+        </junit>
+    </target>
+    <target name="math3Test.test_calculate(double, double)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="math3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="DeveloperTest.classpath"/>
+        </junit>
+    </target>
+    <target name="math3Test.test_calculate">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="math3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="DeveloperTest.classpath"/>
+        </junit>
+    </target>
+    <target name="math3Test.test_error">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="math3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="DeveloperTest.classpath"/>
+        </junit>
+    </target>
+    <target name="math3Test.test_math3_abs">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="math3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="DeveloperTest.classpath"/>
+        </junit>
+    </target>
+    <target name="math3Test.test_math3_add">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="math3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="DeveloperTest.classpath"/>
+        </junit>
+    </target>
+    <target name="math3Test.test_math3_mul">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="math3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="DeveloperTest.classpath"/>
+        </junit>
+    </target>
+    <target name="math3Use">
+        <java classname="math3Use" failonerror="true" fork="yes">
+            <classpath refid="DeveloperTest.classpath"/>
+        </java>
+    </target>
     <target name="sumTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -75,10 +161,23 @@
             <classpath refid="DeveloperTest.classpath"/>
         </junit>
     </target>
-    <target name="math3Use">
-        <java classname="math3Use" failonerror="true" fork="yes">
+    <target name="math3Test.test_error2">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="math3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
             <classpath refid="DeveloperTest.classpath"/>
-        </java>
+        </junit>
+    </target>
+    <target name="math3Test.driver_abs(double)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="math3Test" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="DeveloperTest.classpath"/>
+        </junit>
     </target>
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
