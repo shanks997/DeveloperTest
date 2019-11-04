@@ -28,7 +28,7 @@ public class math3Use {
 	
 	public static double div(double x, double y) {
 		if (x == 0) {
-			throw new ArithmeticException("è¢«é™¤æ•°ä¸èƒ½ä¸º0ï¼");
+			throw new ArithmeticException("±»³ıÊı²»ÄÜÎª0£¡");
 		}
 		Divide div = new Divide();
 		return div.value(x, y);
@@ -55,7 +55,7 @@ public class math3Use {
 	public static void main(String[] args) { 
 		double x = 2, y = 1;
 		double z = calculate(x, y);
-		System.out.println("the result isï¼š" + z);
+		System.out.println("the result is£º" + z);
 	}
 	
 }

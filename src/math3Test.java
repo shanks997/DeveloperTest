@@ -7,8 +7,8 @@ import org.apache.commons.math3.analysis.function.Multiply;
 class math3Test {
 
 	/*
-	 * å¼€å‘è€…æµ‹è¯•(2) 2 
-	 * é”™è¯¯æµ‹è¯•
+	 * ¿ª·¢Õß²âÊÔ(2) 2 
+	 * ´íÎó²âÊÔ
 	 */	
 	
 	@Test
@@ -27,31 +27,31 @@ class math3Test {
 	
 	
 	/*
-	 * å¼€å‘è€…æµ‹è¯•(2) 3
-	 * åŸºæœ¬å•å…ƒæµ‹è¯•
+	 * ¿ª·¢Õß²âÊÔ(2) 3
+	 * »ù±¾µ¥Ôª²âÊÔ
 	 */	
 	
-	// æµ‹è¯• commons.math3 åº“ç±» Add
+	// ²âÊÔ commons.math3 ¿âÀà Add
 	@Test
 	void test_math3_add() {
 		Add add = new Add();
 		assertEquals(3, add.value(1, 2));
 	}
 		
-	// æµ‹è¯• commons.math3 åº“ç±» Multiply
+	// ²âÊÔ commons.math3 ¿âÀà Multiply
 	@Test
 	void test_math3_mul() {
 		Multiply mul = new Multiply();
 		assertEquals(2, mul.value(1, 2));
 	}
 	
-	// æµ‹è¯•å°ç¨‹åºæ–¹æ³• sub
+	// ²âÊÔĞ¡³ÌĞò·½·¨ sub
 	@Test
 	void test_math3_sub() {
 		assertEquals(2, sub(3, 1));
 	}
 	
-	// æµ‹è¯•å°ç¨‹åºæ–¹æ³• div
+	// ²âÊÔĞ¡³ÌĞò·½·¨ div
 	@Test
 	void test_math3_div() {
 		assertEquals(2, div(6, 3));
@@ -59,11 +59,11 @@ class math3Test {
 	
 	
 	/*
-	 * å¼€å‘è€…æµ‹è¯•(2) 4 
-	 * é©±åŠ¨æ¨¡å—ã€æ¡©æ¨¡å—æµ‹è¯•
+	 * ¿ª·¢Õß²âÊÔ(2) 4 
+	 * Çı¶¯Ä£¿é¡¢×®Ä£¿é²âÊÔ
 	 */	
 	
-	// å¯¹ abs æ–¹æ³•è®¾ç½®é©±åŠ¨æ¨¡å—
+	// ¶Ô abs ·½·¨ÉèÖÃÇı¶¯Ä£¿é
 	double driver_abs(double x) {
 		x = abs(x);
 		return x + 1;
@@ -75,7 +75,7 @@ class math3Test {
 	}
 	
 	
-	// å¯¹ calculate æ–¹æ³•è®¾ç½®æ¡©æ¨¡å—
+	// ¶Ô calculate ·½·¨ÉèÖÃ×®Ä£¿é
 	public static double abs(double x) {
 		return x;
 	}
