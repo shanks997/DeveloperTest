@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?><TestSessionContainer xmlns="http://www.codecover.org/xml/testsession-container" Date="1573267246682" TestSessionContainerId="320c578d-c995-4465-b11b-a0c2577b2c7c" version="1.0">
+<SrcFileList>
+<SrcFile Content="import org.apache.commons.math3.analysis.function.Abs;&#13;&#10;import org.apache.commons.math3.analysis.function.Add;&#13;&#10;import org.apache.commons.math3.analysis.function.Divide;&#13;&#10;import org.apache.commons.math3.analysis.function.Multiply;&#13;&#10;import org.apache.commons.math3.analysis.function.Subtract;&#13;&#10;&#13;&#10;public class math3Use {&#13;&#10;&#9;&#13;&#10;&#9;public static double abs(double x) {&#13;&#10;&#9;&#9;Abs abs = new Abs();&#13;&#10;&#9;&#9;return abs.value(x);&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public static double add(double x, double y) {&#13;&#10;&#9;&#9;Add add = new Add();&#13;&#10;&#9;&#9;return add.value(x, y);&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public static double sub(double x, double y) {&#13;&#10;&#9;&#9;Subtract sub = new Subtract();&#13;&#10;&#9;&#9;return sub.value(x, y);&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public static double mul(double x, double y) {&#13;&#10;&#9;&#9;Multiply mul = new Multiply();&#13;&#10;&#9;&#9;return mul.value(x, y);&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public static double div(double x, double y) {&#13;&#10;&#9;&#9;if (x == 0) {&#13;&#10;&#9;&#9;&#9;throw new ArithmeticException(&quot;被除数不能为0！&quot;);&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;Divide div = new Divide();&#13;&#10;&#9;&#9;return div.value(x, y);&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public static double calculate(double x, double y) {&#13;&#10;&#9;&#9;double z = 0;&#13;&#10;&#9;&#9;if (x &lt;= 0  || y &gt; 3) {&#13;&#10;&#9;&#9;&#9;z = sub(z, x);&#13;&#10;&#9;&#9;&#9;z = add(z, y);&#13;&#10;&#9;&#9;} else if (x &lt; 2 &amp;&amp; y &lt; 0) {&#13;&#10;&#9;&#9;&#9;// 0 &lt; x &lt; 2 &amp;&amp; y &lt; 0&#13;&#10;&#9;&#9;&#9;y = abs(y);&#13;&#10;&#9;&#9;&#9;z = add(z, x);&#13;&#10;&#9;&#9;&#9;z = mul(z, y);&#13;&#10;&#9;&#9;} else {&#13;&#10;&#9;&#9;&#9;// x &gt;= 2 || 0 &lt;= y &lt;= 3&#13;&#10;&#9;&#9;&#9;z = add(z, x);&#13;&#10;&#9;&#9;&#9;z = div(z, y);&#13;&#10;&#9;&#9;}&#9;&#9;&#13;&#10;&#9;&#9;return z;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public static void main(String[] args) { &#13;&#10;&#9;&#9;double x = 2, y = 1;&#13;&#10;&#9;&#9;double z = calculate(x, y);&#13;&#10;&#9;&#9;System.out.println(&quot;the result is：&quot; + z);&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;}" Filename="math3Use.java" Intrnl_Id="1"/>
+</SrcFileList>
+<CritList>
+<CritListEntry Name="org.codecover.model.utils.criteria.LoopCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.QMOCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.ConditionCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.BranchCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.SynchronizedStatementCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.StatementCoverage" PluginName="org.codecover"/>
+</CritList>
+<BoolOpList>
+<BoolOp Arity="2" Intrnl_Id="2" Name="conditional and (&amp;&amp;)">
+<BoolAssgnmntBoolMapList>
+<MapEntry BoolAssgnmnt="02" Value="false"/>
+<MapEntry BoolAssgnmnt="10" Value="false"/>
+<MapEntry BoolAssgnmnt="11" Value="true"/>
+</BoolAssgnmntBoolMapList>
+</BoolOp>
+<BoolOp Arity="2" Intrnl_Id="3" Name="conditional or (||)">
+<BoolAssgnmntBoolMapList>
+<MapEntry BoolAssgnmnt="00" Value="false"/>
+<MapEntry BoolAssgnmnt="01" Value="true"/>
+<MapEntry BoolAssgnmnt="12" Value="true"/>
+</BoolAssgnmntBoolMapList>
+</BoolOp>
+</BoolOpList>
+<HierarchyLvlTypeList>
+<HierarchyLvlType EnglishName="method" IntrnlName="method" Intrnl_Id="4"/>
+<HierarchyLvlType EnglishName="class" IntrnlName="class" Intrnl_Id="5"/>
+<HierarchyLvlType EnglishName="default package" IntrnlName="default package" Intrnl_Id="6"/>
+</HierarchyLvlTypeList>
+<MASTRoot>
+<HierarchyLvl HierarchyLvlId="9" HierarchyLvlTypeId="6" Intrnl_Id="7" Name="default package">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="8" HierarchyLvlTypeId="5" Intrnl_Id="8" Name="math3Use">
+<Header>
+<Loc EndOffset="316" SrcFileId="1" StartOffset="295"/>
+</Header>
+<LocList>
+<Loc EndOffset="1447" SrcFileId="1" StartOffset="295"/>
+</LocList>
+<HierarchyLvl HierarchyLvlId="1" HierarchyLvlTypeId="4" Intrnl_Id="9" Name="abs">
+<Header>
+<Loc EndOffset="358" SrcFileId="1" StartOffset="324"/>
+</Header>
+<LocList>
+<Loc EndOffset="412" SrcFileId="1" StartOffset="324"/>
+</LocList>
+<StmntSeq Intrnl_Id="10">
+<LocList>
+<Loc EndOffset="384" SrcFileId="1" StartOffset="364"/>
+<Loc EndOffset="408" SrcFileId="1" StartOffset="388"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="math3Use.java" Intrnl_Id="11">
+<LocList>
+<Loc EndOffset="384" SrcFileId="1" StartOffset="364"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S2" CovItemPrefix="math3Use.java" Intrnl_Id="12">
+<LocList>
+<Loc EndOffset="408" SrcFileId="1" StartOffset="388"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="2" HierarchyLvlTypeId="4" Intrnl_Id="13" Name="add">
+<Header>
+<Loc EndOffset="462" SrcFileId="1" StartOffset="418"/>
+</Header>
+<LocList>
+<Loc EndOffset="519" SrcFileId="1" StartOffset="418"/>
+</LocList>
+<StmntSeq Intrnl_Id="14">
+<LocList>
+<Loc EndOffset="488" SrcFileId="1" StartOffset="468"/>
+<Loc EndOffset="515" SrcFileId="1" StartOffset="492"/>
+</LocList>
+<BasicStmnt CovItemId="S3" CovItemPrefix="math3Use.java" Intrnl_Id="15">
+<LocList>
+<Loc EndOffset="488" SrcFileId="1" StartOffset="468"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S4" CovItemPrefix="math3Use.java" Intrnl_Id="16">
+<LocList>
+<Loc EndOffset="515" SrcFileId="1" StartOffset="492"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="3" HierarchyLvlTypeId="4" Intrnl_Id="17" Name="sub">
+<Header>
+<Loc EndOffset="569" SrcFileId="1" StartOffset="525"/>
+</Header>
+<LocList>
+<Loc EndOffset="636" SrcFileId="1" StartOffset="525"/>
+</LocList>
+<StmntSeq Intrnl_Id="18">
+<LocList>
+<Loc EndOffset="605" SrcFileId="1" StartOffset="575"/>
+<Loc EndOffset="632" SrcFileId="1" StartOffset="609"/>
+</LocList>
+<BasicStmnt CovItemId="S5" CovItemPrefix="math3Use.java" Intrnl_Id="19">
+<LocList>
+<Loc EndOffset="605" SrcFileId="1" StartOffset="575"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S6" CovItemPrefix="math3Use.java" Intrnl_Id="20">
+<LocList>
+<Loc EndOffset="632" SrcFileId="1" StartOffset="609"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="4" HierarchyLvlTypeId="4" Intrnl_Id="21" Name="mul">
+<Header>
+<Loc EndOffset="686" SrcFileId="1" StartOffset="642"/>
+</Header>
+<LocList>
+<Loc EndOffset="753" SrcFileId="1" StartOffset="642"/>
+</LocList>
+<StmntSeq Intrnl_Id="22">
+<LocList>
+<Loc EndOffset="722" SrcFileId="1" StartOffset="692"/>
+<Loc EndOffset="749" SrcFileId="1" StartOffset="726"/>
+</LocList>
+<BasicStmnt CovItemId="S7" CovItemPrefix="math3Use.java" Intrnl_Id="23">
+<LocList>
+<Loc EndOffset="722" SrcFileId="1" StartOffset="692"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S8" CovItemPrefix="math3Use.java" Intrnl_Id="24">
+<LocList>
+<Loc EndOffset="749" SrcFileId="1" StartOffset="726"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="5" HierarchyLvlTypeId="4" Intrnl_Id="25" Name="div">
+<Header>
+<Loc EndOffset="803" SrcFileId="1" StartOffset="759"/>
+</Header>
+<LocList>
+<Loc EndOffset="935" SrcFileId="1" StartOffset="759"/>
+</LocList>
+<StmntSeq Intrnl_Id="26">
+<LocList>
+<Loc EndOffset="874" SrcFileId="1" StartOffset="809"/>
+<Loc EndOffset="904" SrcFileId="1" StartOffset="878"/>
+<Loc EndOffset="931" SrcFileId="1" StartOffset="908"/>
+</LocList>
+<CondStmnt CovItemId="S9" CovItemPrefix="math3Use.java" Intrnl_Id="27">
+<Branch CovItemId="B1" CovItemPrefix="math3Use.java" Implct="false" Intrnl_Id="28">
+<Cond/>
+<LocList>
+<Loc EndOffset="874" SrcFileId="1" StartOffset="821"/>
+</LocList>
+<StmntSeq Intrnl_Id="29">
+<LocList>
+<Loc EndOffset="869" SrcFileId="1" StartOffset="827"/>
+</LocList>
+<BasicStmnt CovItemId="S10" CovItemPrefix="math3Use.java" Intrnl_Id="30">
+<LocList>
+<Loc EndOffset="869" SrcFileId="1" StartOffset="827"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B2" CovItemPrefix="math3Use.java" Implct="true" Intrnl_Id="31">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="32">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="811" SrcFileId="1" StartOffset="809"/>
+<LocList>
+<Loc EndOffset="874" SrcFileId="1" StartOffset="809"/>
+</LocList>
+<RootTerm CovItemId="C1" CovItemPrefix="math3Use.java" Intrnl_Id="33">
+<BasicBoolTerm Intrnl_Id="34">
+<LocList>
+<Loc EndOffset="819" SrcFileId="1" StartOffset="813"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</CondStmnt>
+<BasicStmnt CovItemId="S11" CovItemPrefix="math3Use.java" Intrnl_Id="35">
+<LocList>
+<Loc EndOffset="904" SrcFileId="1" StartOffset="878"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S12" CovItemPrefix="math3Use.java" Intrnl_Id="36">
+<LocList>
+<Loc EndOffset="931" SrcFileId="1" StartOffset="908"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="6" HierarchyLvlTypeId="4" Intrnl_Id="37" Name="calculate">
+<Header>
+<Loc EndOffset="991" SrcFileId="1" StartOffset="941"/>
+</Header>
+<LocList>
+<Loc EndOffset="1290" SrcFileId="1" StartOffset="941"/>
+</LocList>
+<StmntSeq Intrnl_Id="38">
+<LocList>
+<Loc EndOffset="1010" SrcFileId="1" StartOffset="997"/>
+<Loc EndOffset="1271" SrcFileId="1" StartOffset="1014"/>
+<Loc EndOffset="1286" SrcFileId="1" StartOffset="1277"/>
+</LocList>
+<BasicStmnt CovItemId="S13" CovItemPrefix="math3Use.java" Intrnl_Id="39">
+<LocList>
+<Loc EndOffset="1010" SrcFileId="1" StartOffset="997"/>
+</LocList>
+</BasicStmnt>
+<CondStmnt CovItemId="S14" CovItemPrefix="math3Use.java" Intrnl_Id="40">
+<Branch CovItemId="B3" CovItemPrefix="math3Use.java" Implct="false" Intrnl_Id="41">
+<Cond/>
+<LocList>
+<Loc EndOffset="1080" SrcFileId="1" StartOffset="1036"/>
+</LocList>
+<StmntSeq Intrnl_Id="42">
+<LocList>
+<Loc EndOffset="1056" SrcFileId="1" StartOffset="1042"/>
+<Loc EndOffset="1075" SrcFileId="1" StartOffset="1061"/>
+</LocList>
+<BasicStmnt CovItemId="S15" CovItemPrefix="math3Use.java" Intrnl_Id="43">
+<LocList>
+<Loc EndOffset="1056" SrcFileId="1" StartOffset="1042"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S16" CovItemPrefix="math3Use.java" Intrnl_Id="44">
+<LocList>
+<Loc EndOffset="1075" SrcFileId="1" StartOffset="1061"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B4" CovItemPrefix="math3Use.java" Implct="false" Intrnl_Id="45">
+<Cond>
+<Loc EndOffset="1085" SrcFileId="1" StartOffset="1081"/>
+</Cond>
+<LocList>
+<Loc EndOffset="1271" SrcFileId="1" StartOffset="1086"/>
+</LocList>
+<StmntSeq Intrnl_Id="46">
+<LocList>
+<Loc EndOffset="1271" SrcFileId="1" StartOffset="1086"/>
+</LocList>
+<CondStmnt CovItemId="S17" CovItemPrefix="math3Use.java" Intrnl_Id="47">
+<Branch CovItemId="B5" CovItemPrefix="math3Use.java" Implct="false" Intrnl_Id="48">
+<Cond/>
+<LocList>
+<Loc EndOffset="1192" SrcFileId="1" StartOffset="1106"/>
+</LocList>
+<StmntSeq Intrnl_Id="49">
+<LocList>
+<Loc EndOffset="1149" SrcFileId="1" StartOffset="1138"/>
+<Loc EndOffset="1168" SrcFileId="1" StartOffset="1154"/>
+<Loc EndOffset="1187" SrcFileId="1" StartOffset="1173"/>
+</LocList>
+<BasicStmnt CovItemId="S18" CovItemPrefix="math3Use.java" Intrnl_Id="50">
+<LocList>
+<Loc EndOffset="1149" SrcFileId="1" StartOffset="1138"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S19" CovItemPrefix="math3Use.java" Intrnl_Id="51">
+<LocList>
+<Loc EndOffset="1168" SrcFileId="1" StartOffset="1154"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S20" CovItemPrefix="math3Use.java" Intrnl_Id="52">
+<LocList>
+<Loc EndOffset="1187" SrcFileId="1" StartOffset="1173"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B6" CovItemPrefix="math3Use.java" Implct="false" Intrnl_Id="53">
+<Cond>
+<Loc EndOffset="1197" SrcFileId="1" StartOffset="1193"/>
+</Cond>
+<LocList>
+<Loc EndOffset="1271" SrcFileId="1" StartOffset="1198"/>
+</LocList>
+<StmntSeq Intrnl_Id="54">
+<LocList>
+<Loc EndOffset="1247" SrcFileId="1" StartOffset="1233"/>
+<Loc EndOffset="1266" SrcFileId="1" StartOffset="1252"/>
+</LocList>
+<BasicStmnt CovItemId="S21" CovItemPrefix="math3Use.java" Intrnl_Id="55">
+<LocList>
+<Loc EndOffset="1247" SrcFileId="1" StartOffset="1233"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S22" CovItemPrefix="math3Use.java" Intrnl_Id="56">
+<LocList>
+<Loc EndOffset="1266" SrcFileId="1" StartOffset="1252"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="1088" SrcFileId="1" StartOffset="1086"/>
+<LocList>
+<Loc EndOffset="1271" SrcFileId="1" StartOffset="1086"/>
+</LocList>
+<RootTerm CovItemId="C3" CovItemPrefix="math3Use.java" Intrnl_Id="57">
+<OpTerm BooleanOpId="2" Intrnl_Id="58">
+<BasicBoolTerm Intrnl_Id="59">
+<LocList>
+<Loc EndOffset="1095" SrcFileId="1" StartOffset="1090"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="60">
+<LocList>
+<Loc EndOffset="1104" SrcFileId="1" StartOffset="1099"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="1098" SrcFileId="1" StartOffset="1096"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="1016" SrcFileId="1" StartOffset="1014"/>
+<LocList>
+<Loc EndOffset="1271" SrcFileId="1" StartOffset="1014"/>
+</LocList>
+<RootTerm CovItemId="C2" CovItemPrefix="math3Use.java" Intrnl_Id="61">
+<OpTerm BooleanOpId="3" Intrnl_Id="62">
+<BasicBoolTerm Intrnl_Id="63">
+<LocList>
+<Loc EndOffset="1024" SrcFileId="1" StartOffset="1018"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="64">
+<LocList>
+<Loc EndOffset="1034" SrcFileId="1" StartOffset="1029"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="1028" SrcFileId="1" StartOffset="1026"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+<BasicStmnt CovItemId="S23" CovItemPrefix="math3Use.java" Intrnl_Id="65">
+<LocList>
+<Loc EndOffset="1286" SrcFileId="1" StartOffset="1277"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="7" HierarchyLvlTypeId="4" Intrnl_Id="66" Name="main">
+<Header>
+<Loc EndOffset="1334" SrcFileId="1" StartOffset="1296"/>
+</Header>
+<LocList>
+<Loc EndOffset="1441" SrcFileId="1" StartOffset="1296"/>
+</LocList>
+<StmntSeq Intrnl_Id="67">
+<LocList>
+<Loc EndOffset="1361" SrcFileId="1" StartOffset="1341"/>
+<Loc EndOffset="1392" SrcFileId="1" StartOffset="1365"/>
+<Loc EndOffset="1437" SrcFileId="1" StartOffset="1396"/>
+</LocList>
+<BasicStmnt CovItemId="S24" CovItemPrefix="math3Use.java" Intrnl_Id="68">
+<LocList>
+<Loc EndOffset="1361" SrcFileId="1" StartOffset="1341"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S25" CovItemPrefix="math3Use.java" Intrnl_Id="69">
+<LocList>
+<Loc EndOffset="1392" SrcFileId="1" StartOffset="1365"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S26" CovItemPrefix="math3Use.java" Intrnl_Id="70">
+<LocList>
+<Loc EndOffset="1437" SrcFileId="1" StartOffset="1396"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+</MASTRoot>
+<TestSession Comment="" Date="1573267376235" Name="2019-11-9 10:42:56">
+<TestCase Comment="This is a test case containing all coverage results cause no startTestCase methods where captured." Date="1573267376099" Name="UNNAMED TESTCASE">
+<CovList>
+<CovPrefix CovItemPrefix="math3Use.java">
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="B6" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="1"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S21" Value="1"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S9" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="math3Use.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="02" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1573267409047" Name="2019-11-9 10:43:29">
+<TestCase Comment="This is a test case containing all coverage results cause no startTestCase methods where captured." Date="1573267408955" Name="UNNAMED TESTCASE">
+<CovList>
+<CovPrefix CovItemPrefix="math3Use.java">
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="B6" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="1"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S21" Value="1"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S9" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="math3Use.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="02" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1573267440687" Name="2019-11-9 10:44:00">
+<TestCase Comment="This is a test case containing all coverage results cause no startTestCase methods where captured." Date="1573267440497" Name="UNNAMED TESTCASE">
+<CovList>
+<CovPrefix CovItemPrefix="math3Use.java">
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="B6" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="1"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S21" Value="1"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S9" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="math3Use.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="02" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1573267451984" Name="2019-11-9 10:44:11">
+<TestCase Comment="This is a test case containing all coverage results cause no startTestCase methods where captured." Date="1573267451873" Name="UNNAMED TESTCASE">
+<CovList>
+<CovPrefix CovItemPrefix="math3Use.java">
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="B6" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="1"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S21" Value="1"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S9" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="math3Use.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="02" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1573267565790" Name="2019-11-9 10:46:05">
+<TestCase Comment="This is a test case containing all coverage results cause no startTestCase methods where captured." Date="1573267565702" Name="UNNAMED TESTCASE">
+<CovList>
+<CovPrefix CovItemPrefix="math3Use.java">
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="B6" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="1"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S21" Value="1"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S9" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="math3Use.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="02" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1573267580285" Name="2019-11-9 10:46:20">
+<TestCase Comment="This is a test case containing all coverage results cause no startTestCase methods where captured." Date="1573267580184" Name="UNNAMED TESTCASE">
+<CovList>
+<CovPrefix CovItemPrefix="math3Use.java">
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="B6" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="1"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S21" Value="1"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S9" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="math3Use.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="02" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1573267619801" Name="2019-11-9 10:46:59">
+<TestCase Comment="This is a test case containing all coverage results cause no startTestCase methods where captured." Date="1573267619675" Name="UNNAMED TESTCASE">
+<CovList>
+<CovPrefix CovItemPrefix="math3Use.java">
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="B6" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="1"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S21" Value="1"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S9" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="math3Use.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="02" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1573267892846" Name="2019-11-9 10:51:32">
+<TestCase Comment="This is a test case containing all coverage results cause no startTestCase methods where captured." Date="1573267892748" Name="UNNAMED TESTCASE">
+<CovList>
+<CovPrefix CovItemPrefix="math3Use.java">
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="B6" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="1"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S21" Value="1"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S9" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="math3Use.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="02" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1573267910121" Name="2019-11-9 10:51:50">
+<TestCase Comment="This is a test case containing all coverage results cause no startTestCase methods where captured." Date="1573267910036" Name="UNNAMED TESTCASE">
+<CovList>
+<CovPrefix CovItemPrefix="math3Use.java">
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="B6" Value="1"/>
+<Cov CovItemId="S11" Value="1"/>
+<Cov CovItemId="S12" Value="1"/>
+<Cov CovItemId="S13" Value="1"/>
+<Cov CovItemId="S14" Value="1"/>
+<Cov CovItemId="S17" Value="1"/>
+<Cov CovItemId="S21" Value="1"/>
+<Cov CovItemId="S22" Value="1"/>
+<Cov CovItemId="S23" Value="1"/>
+<Cov CovItemId="S24" Value="1"/>
+<Cov CovItemId="S25" Value="1"/>
+<Cov CovItemId="S26" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S9" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="math3Use.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="00" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="2" RootTermCovItemId="C3">
+<MapEntry BoolAssgnmnt="02" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+</TestSessionContainer>

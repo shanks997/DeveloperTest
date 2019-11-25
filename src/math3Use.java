@@ -7,7 +7,7 @@ import org.apache.commons.math3.analysis.function.Subtract;
 public class math3Use {
 	
 	public static double abs(double x) {
-//		Abs abs = new Abs();
+		Abs abs = new Abs();
 		return abs.value(x);
 	}
 	
@@ -39,13 +39,13 @@ public class math3Use {
 		if (x <= 0  || y > 3) {
 			z = sub(z, x);
 			z = add(z, y);
-		} else if (x < 2 && y < 0) {
-			// 0 < x < 2 && y < 0
+		} else if (x < 4 && y < 0) {
+			// 0 < x < 4 && y < 0
 			y = abs(y);
 			z = add(z, x);
 			z = mul(z, y);
 		} else {
-			// x >= 2 || 0 <= y <= 3
+			// x >= 4 || 0 <= y <= 3
 			z = add(z, x);
 			z = div(z, y);
 		}		
@@ -53,7 +53,7 @@ public class math3Use {
 	}
 	
 	public static void main(String[] args) { 
-		double x = 2, y = 1;
+		double x = 2, y = -1;
 		double z = calculate(x, y);
 		System.out.println("the result is：" + z);
 	}
