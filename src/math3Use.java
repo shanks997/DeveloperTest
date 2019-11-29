@@ -53,7 +53,7 @@ public class math3Use {
 	}
 	
 	public static void main(String[] args) { 
-		//double x1 = 2, y1 = -1;
+		double x1 = 2, y1 = -1;
 		double z1 = calculate(x1, y1);
 		
 		double x2 = -2, y2 = 1;
