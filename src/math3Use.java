@@ -53,9 +53,35 @@ public class math3Use {
 	}
 	
 	public static void main(String[] args) { 
-		double x = 2, y = -1;
-		double z = calculate(x, y);
-		System.out.println("the result is：" + z);
+		//double x1 = 2, y1 = -1;
+		double z1 = calculate(x1, y1);
+		
+		double x2 = -2, y2 = 1;
+		double z2 = calculate(x2, y2);
+		
+		double x3 = 5, y3 = 1;
+		double z3 = calculate(x3, y3);
+		
+		double x4 = 1, y4 = 4;
+		double z4 = calculate(x4, y4);
+		
+		double x5 = 1, y5 = -1;
+		double z5 = calculate(x5, y5);
+		
+		double x6 = 1, y6 = 1;
+		double z6 = calculate(x6, y6);
+		
+		try {
+			math3Use.div(0, 2);
+		} catch (ArithmeticException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("z1 = " + z1);
+		System.out.println("z2 = " + z2);
+		System.out.println("z3 = " + z3);
+		System.out.println("z4 = " + z4);
+		System.out.println("z5 = " + z5);
 	}
 	
 }
